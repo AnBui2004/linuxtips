@@ -1,0 +1,1 @@
+xterm -e 'sleep 15 && echo "password" | sudo -S usb_modeswitch -K -v 0bda -p 1a2b' &
