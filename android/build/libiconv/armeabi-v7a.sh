@@ -10,6 +10,6 @@ export RANLIB=$TOOLCHAIN/bin/llvm-ranlib
 export STRIP=$TOOLCHAIN/bin/llvm-strip
 mkdir build
 cd build
-../configure --host=armv7a-linux-androideabi --prefix=$HOME/output/android/armeabi-v7a/libiconv
+../configure --host=armv7a-linux-androideabi --prefix=$HOME/output/android/libiconv/armeabi-v7a
 make -j$(nproc)
 make install
