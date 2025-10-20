@@ -2,7 +2,7 @@
 mkdir -p $HOME/output/android/libiconv/arm64-v8a/lib/pkgconfig
 
 cat > $HOME/output/android/libiconv/arm64-v8a/lib/pkgconfig/libiconv.pc <<'EOF'
-prefix=$HOME/output/android/libiconv/arm64-v8a
+prefix=/home/nguyen/output/android/libiconv/arm64-v8a
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
@@ -21,7 +21,7 @@ cp $HOME/output/android/libiconv/arm64-v8a/lib/pkgconfig/libiconv.pc \
 mkdir -p $HOME/output/android/libiconv/armeabi-v7a/lib/pkgconfig
 
 cat > $HOME/output/android/libiconv/armeabi-v7a/lib/pkgconfig/libiconv.pc <<'EOF'
-prefix=$HOME/output/android/libiconv/armeabi-v7a
+prefix=/home/nguyen/output/android/libiconv/armeabi-v7a
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
@@ -40,7 +40,7 @@ cp $HOME/output/android/libiconv/armeabi-v7a/lib/pkgconfig/libiconv.pc \
 mkdir -p $HOME/output/android/libiconv/x86_64/lib/pkgconfig
 
 cat > $HOME/output/android/libiconv/x86_64/lib/pkgconfig/libiconv.pc <<'EOF'
-prefix=$HOME/output/android/libiconv/x86_64
+prefix=/home/nguyen/output/android/libiconv/x86_64
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
@@ -59,7 +59,7 @@ cp $HOME/output/android/libiconv/x86_64/lib/pkgconfig/libiconv.pc \
 mkdir -p $HOME/output/android/libiconv/x86/lib/pkgconfig
 
 cat > $HOME/output/android/libiconv/x86/lib/pkgconfig/libiconv.pc <<'EOF'
-prefix=$HOME/output/android/libiconv/x86
+prefix=/home/nguyen/output/android/libiconv/x86
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

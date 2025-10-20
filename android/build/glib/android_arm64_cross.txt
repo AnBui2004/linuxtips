@@ -1,0 +1,20 @@
+[binaries]
+c = '/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android23-clang'
+cpp = '/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android23-clang++'
+ar = '/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ar'
+strip = '/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip'
+pkgconfig = '/usr/bin/pkg-config'
+
+[properties]
+needs_exe_wrapper = true
+sys_root = '/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/sysroot'
+pkg_config_path = '/home/nguyen/output/android/libiconv/arm64-v8a/lib/pkgconfig'
+pkg_config_libdir = '/home/nguyen/output/android/libiconv/arm64-v8a/lib/pkgconfig'
+c_args = ['-I/home/nguyen/output/android/libiconv/arm64-v8a/include']
+c_link_args = ['-L/home/nguyen/output/android/libiconv/arm64-v8a/lib', '-liconv']
+
+[host_machine]
+system = 'android'
+cpu_family = 'aarch64'
+cpu = 'armv8-a'
+endian = 'little'
