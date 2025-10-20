@@ -1,0 +1,54 @@
+[binaries]
+c = '/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android23-clang'
+cpp = '/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android23-clang++'
+ar = '/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ar'
+strip = '/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip'
+pkgconfig = '/usr/bin/pkg-config'
+
+[properties]
+needs_exe_wrapper = true
+sys_root = '/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/sysroot'
+pkg_config_libdir = '/home/nguyen/output/android/spice-protocol/share/pkgconfig:/home/nguyen/output/android/glib/arm64-v8a/lib/pkgconfig:/home/nguyen/output/android/pixman/arm64-v8a/lib/pkgconfig:/home/nguyen/output/android/libiconv/arm64-v8a/lib/pkgconfig:/home/nguyen/output/android/openssl/arm64-v8a/lib/pkgconfig:/home/nguyen/output/android/libjpeg/arm64-v8a/lib/pkgconfig'
+
+c_args = [
+  '--sysroot=/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/sysroot',
+  '-DANDROID',
+  '-D__ANDROID_API__=23',
+  '-march=armv8-a',
+  '-fPIC',
+  '-I/home/nguyen/output/android/spice-protocol/include/spice-1',
+  '-I/home/nguyen/output/android/glib/arm64-v8a/include/glib-2.0',
+  '-I/home/nguyen/output/android/glib/arm64-v8a/lib/glib-2.0/include',
+  '-I/home/nguyen/output/android/pixman/arm64-v8a/usr/local/include/pixman-1',
+  '-I/home/nguyen/output/android/openssl/arm64-v8a/include',
+  '-I/home/nguyen/output/android/libjpeg/arm64-v8a/include']
+
+cpp_args = [
+  '--sysroot=/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/sysroot',
+  '-DANDROID',
+  '-D__ANDROID_API__=23',
+  '-march=armv8-a',
+  '-fPIC',
+  '-I/home/nguyen/output/android/spice-protocol/include/spice-1',
+  '-I/home/nguyen/output/android/glib/arm64-v8a/include/glib-2.0',
+  '-I/home/nguyen/output/android/glib/arm64-v8a/lib/glib-2.0/include',
+  '-I/home/nguyen/output/android/pixman/arm64-v8a/usr/local/include/pixman-1',
+  '-I/home/nguyen/output/android/openssl/arm64-v8a/include',
+  '-I/home/nguyen/output/android/libjpeg/arm64-v8a/include']
+  
+pixman_libs = ['/home/nguyen/output/android/pixman/arm64-v8a/usr/local/lib/libpixman-1.a']
+glib_libs = [
+  '/home/nguyen/output/android/glib/arm64-v8a/lib/libglib-2.0.a',
+  '/home/nguyen/output/android/glib/arm64-v8a/lib/libgio-2.0.a',
+  '/home/nguyen/output/android/glib/arm64-v8a/lib/libgobject-2.0.a',
+  '/home/nguyen/output/android/glib/arm64-v8a/lib/libintl.a'
+]
+openssl_libs = [
+  '/home/nguyen/output/android/openssl/arm64-v8a/lib/libssl.a',
+  '/home/nguyen/output/android/openssl/arm64-v8a/lib/libcrypto.a']
+
+[host_machine]
+system = 'android'
+cpu_family = 'aarch64'
+cpu = 'armv8-a'
+endian = 'little'

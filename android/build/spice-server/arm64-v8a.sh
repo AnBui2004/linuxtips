@@ -1,11 +1,17 @@
-export PKG_CONFIG_PATH="$HOME/output/android/glib/arm64-v8a/lib/pkgconfig:$HOME/output/android/libiconv/arm64-v8a/lib/pkgconfig:$HOME/output/android/spice-protocol/share/pkgconfig"
-rm -rf builddir
-meson setup builddir \
-  --cross-file=$HOME/Downloads/glib-glib-2-86/android_arm64_cross.txt \
-  -Ddefault_library=shared \
+export NDK=$HOME/Android/Sdk/ndk/29.0.14206865
+export TOOLCHAIN=$NDK/toolchains/llvm/prebuilt/linux-x86_64
+export SYSROOT=$TOOLCHAIN/sysroot
+export API=23
+rm -rf build_android_aarch64
+meson setup build_android_aarch64 \
+  --cross-file android_arm64_cross.txt \
+  --prefix=$HOME/output/android/spice-server/aarch64 \
+  -Ddefault_library=static \
+  -Dgstreamer=no \
+  -Dsmartcard=disabled \
+  -Dlz4=false \
+  -Dsasl=false \
   -Dtests=false \
-  -Dmanual=false \
-  -Dgstreamer=no
-
-ninja -C builddir
-ninja -C builddir install
+  -Dmanual=false
+ninja -C build_android_aarch64
+ninja -C build_android_aarch64 install
