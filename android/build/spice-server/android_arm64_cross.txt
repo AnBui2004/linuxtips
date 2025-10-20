@@ -10,7 +10,6 @@ needs_exe_wrapper = true
 sys_root = '/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/sysroot'
 pkg_config_libdir = '/home/nguyen/output/android/spice-protocol/share/pkgconfig:/home/nguyen/output/android/glib/arm64-v8a/lib/pkgconfig:/home/nguyen/output/android/pixman/arm64-v8a/lib/pkgconfig:/home/nguyen/output/android/libiconv/arm64-v8a/lib/pkgconfig:/home/nguyen/output/android/openssl/arm64-v8a/lib/pkgconfig:/home/nguyen/output/android/libjpeg/arm64-v8a/lib/pkgconfig'
 
-# Các đường dẫn include trực tiếp để Meson tìm header
 c_args = [
   '--sysroot=/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/sysroot',
   '-DANDROID',
