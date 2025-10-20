@@ -1,0 +1,35 @@
+[binaries]
+c = '/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/x86_64-linux-android23-clang'
+cpp = '/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/x86_64-linux-android23-clang++'
+ar = '/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ar'
+strip = '/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip'
+pkgconfig = '/usr/bin/pkg-config'
+exe_wrapper = 'true'  # để Meson không cố chạy file target
+sys_root = '/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/sysroot'
+
+[host_machine]
+system = 'android'
+cpu_family = 'x86_64'
+cpu = 'x86_64'
+endian = 'little'
+
+[properties]
+needs_exe_wrapper = true
+c_args = [
+  '--sysroot=/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/sysroot',
+  '-DANDROID',
+  '-D__ANDROID_API__=23',
+  '-march=x86-64',
+  '-msse2',
+  '-m64',
+  '-isystem/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/lib/clang/21/include',
+  '-isystem/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include']
+cpp_args = [
+  '--sysroot=/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/sysroot',
+  '-DANDROID',
+  '-D__ANDROID_API__=23',
+  '-march=x86-64',
+  '-msse2',
+  '-m64',
+  '-isystem/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/lib/clang/21/include',
+  '-isystem/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/include']

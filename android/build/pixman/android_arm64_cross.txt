@@ -1,0 +1,17 @@
+[binaries]
+c = '/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android23-clang'
+cpp = '/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android23-clang++'
+ar = '/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ar'
+strip = '/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip'
+pkgconfig = '/usr/bin/pkg-config'
+sys_root = '/home/nguyen/Android/Sdk/ndk/29.0.14206865/toolchains/llvm/prebuilt/linux-x86_64/sysroot'
+
+[host_machine]
+system = 'android'
+cpu_family = 'aarch64'
+cpu = 'armv8-a'
+endian = 'little'
+
+[properties]
+c_args = ['-march=armv8-a', '-D__ARM_NEON__']
+cpp_args = ['-march=armv8-a', '-D__ARM_NEON__']
