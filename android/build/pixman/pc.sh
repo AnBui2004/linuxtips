@@ -1,3 +1,4 @@
+#arm64-v8a
 mkdir -p $HOME/output/android/pixman/arm64-v8a/lib/pkgconfig
 
 cat > $HOME/output/android/pixman/arm64-v8a/lib/pkgconfig/pixman-1.pc <<'EOF'
