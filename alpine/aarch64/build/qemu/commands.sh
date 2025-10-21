@@ -22,6 +22,7 @@ rsync -r ../qemu-0/hw/3dfx ../qemu-1/hw/mesa ./hw/
 patch -p0 -i ../00-qemu92x-mesa-glide.patch
 bash ../scripts/sign_commit
 mkdir ../build && cd ../build
-../qemu-9.2.2/configure --target-list=x86_64-softmmu,i386-softmmu,aarch64-softmmu,ppc-softmmu
+#If you want to build all of them, remove the target-list flag or add more targets separated by comma
+../qemu-9.2.2/configure --enable-gtk --enable-sdl --enable-io-uring --enable-libaio --enable-libssh --enable-cap-ng --target-list=x86_64-softmmu,i386-softmmu,aarch64-softmmu,ppc-softmmu
 #Use all CPU cores to build faster
 make -j$(nproc)
