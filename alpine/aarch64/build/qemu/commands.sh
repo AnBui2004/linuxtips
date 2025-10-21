@@ -2,7 +2,9 @@
 apk update
 apk add --no-cache bash curl tar rsync flex build-base git meson bison ninja python3 py3-pip glib-dev pixman-dev sdl2-dev sdl2_image-dev sndio alsa-utils alsaconf zlib-dev libaio-dev liburing-dev libcap libcap-ng libssh lzo snappy lzfse capstone libcbor libdw gtk+3.0-dev
 pip install Ninja Sphinx --break-system-packages
+#Force upgrade meson to latest version
 pip install meson --upgrade --break-system-packages
+#Add to let the builder know if your CPU supports CRC instructions
 export CFLAGS="-O2 -march=armv8-a+crc -mtune=native"
 export CXXFLAGS="$CFLAGS"
 export LDFLAGS="-march=armv8-a+crc"
@@ -20,4 +22,5 @@ patch -p0 -i ../00-qemu92x-mesa-glide.patch
 bash ../scripts/sign_commit
 mkdir ../build && cd ../build
 ../qemu-9.2.2/configure --target-list=x86_64-softmmu,i386-softmmu,aarch64-softmmu,ppc-softmmu
+#Use all CPU cores to build faster
 make -j$(nproc)
