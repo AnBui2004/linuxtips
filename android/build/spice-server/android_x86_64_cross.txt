@@ -38,6 +38,13 @@ cpp_args = [
   '-I/home/nguyen/output/android/openssl/x86_64/include',
   '-I/home/nguyen/output/android/libjpeg/x86_64/include']
 
+c_ld_args = [
+  '-fuse-ld=lld',
+  '--target=x86_64-linux-android23']
+cpp_ld_args = [
+  '-fuse-ld=lld',
+  '--target=x86_64-linux-android23']
+
 pixman_libs = ['/home/nguyen/output/android/pixman/x86_64/home/nguyen/Downloads/pixman-install-x86_64/lib/libpixman-1.a']
 
 glib_libs = [
