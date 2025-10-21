@@ -1,5 +1,6 @@
 //Qemu 9.2.2
 //Fix when building with Snapdragon CPUs
+//No need to fix if you don't get errors or don't use Mesa.
 //qemu-9.2.2/hw/mesa/mglmapbo.c
 //...
 #include <arm_acle.h>
