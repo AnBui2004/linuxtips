@@ -1,3 +1,4 @@
+#Qemu 9.2.2
 #Build with Snapdragon CPU
 apk update
 apk add --no-cache bash curl tar rsync flex build-base git meson bison ninja python3 py3-pip glib-dev pixman-dev sdl2-dev sdl2_image-dev sndio alsa-utils alsaconf zlib-dev libaio-dev liburing-dev libcap libcap-ng libssh lzo snappy lzfse capstone libcbor libdw gtk+3.0-dev
