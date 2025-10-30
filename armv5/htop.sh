@@ -2,6 +2,7 @@
 cd /home/nguyen/usr/lib/arm-linux-gnueabi
 printf 'INPUT(libncurses.a)\n' > libncurses.so
 printf 'INPUT(libtinfo.a)\n' > libtinfo.so
+cd
 export CFLAGS="-O2 -pipe -march=armv5te -mfloat-abi=soft"
 export LDFLAGS="-L/home/nguyen/usr/lib/arm-linux-gnueabi -static -Wl,--allow-multiple-definition"
 export PPFLAGS="-I/home/nguyen/usr/include"
